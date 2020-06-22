@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Python基础," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Python基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python基础">
+<meta property="og:url" content="http://yoursite.com/2020/06/22/Python%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="Fly">
+<meta property="og:description" content="Python基础">
+<meta property="article:published_time" content="2020-06-22T13:36:37.000Z">
+<meta property="article:modified_time" content="2020-06-22T15:48:08.040Z">
+<meta property="article:author" content="飞翔">
+<meta property="article:tag" content="Python基础">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/06/22/Python基础/"/>
+
+
+
+
+
+  <title>Python基础 | Fly</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+<a href="https://github.com/fzxd16" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Fly</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/22/Python%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="飞翔">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fly">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Python基础</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-22T06:36:37-07:00">
+                2020-06-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Python基础"><a href="#Python基础" class="headerlink" title="Python基础"></a>Python基础</h1><a id="more"></a>
+<h2 id="HelloWorld"><a href="#HelloWorld" class="headerlink" title="HelloWorld"></a>HelloWorld</h2><pre><code>初识print</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;hello world&quot;)</span><br><span class="line">print(&quot;null&quot;)</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 注释</span><br><span class="line">print(&quot;hello hello&quot;)   # 注册3</span><br><span class="line"></span><br><span class="line"># 注释2</span><br><span class="line">print(&quot;hello&quot;)</span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;注释4&quot;&quot;&quot;</span><br></pre></td></tr></table></figure>
+<p>Tips:<br>    （1） 可以采用“#”进行注释，同时可以使用三对引号进行多行注释。如下面的注释4的位置。<br>    （2） Pycharm 可以使用“CTRL+/”将光标标记位置进行快速的单行和多行进行单行注释。</p>
+<hr>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 1.定义一个qq账号</span><br><span class="line">qq_number&#x3D;&quot;lu&quot;</span><br><span class="line"># 2.定义一个qq密码</span><br><span class="line">qq_pwd&#x3D;&quot;123456&quot;</span><br><span class="line"># 3.输出数值</span><br><span class="line">print(qq_number)</span><br><span class="line">print(qq_pwd)</span><br></pre></td></tr></table></figure>
+<p>Tips:<br>（1） Python的变量不定义类型，根据输入的数据识别。<br>（2） 常用强制转换，str(变量)—转换为字符串，int(变量名)—转换为数字。</p>
+<hr>
+<h2 id="例子—苹果"><a href="#例子—苹果" class="headerlink" title="例子—苹果"></a>例子—苹果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 1.单价</span><br><span class="line">price &#x3D; 8</span><br><span class="line"># 2.重量</span><br><span class="line">weight &#x3D; 10</span><br><span class="line"># 3.计算总价</span><br><span class="line">sum &#x3D; weight * price</span><br><span class="line"></span><br><span class="line">print(sum)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">name &#x3D; &quot;明&quot;</span><br><span class="line">age &#x3D; 18</span><br><span class="line">gender &#x3D; True</span><br><span class="line">weight &#x3D; 75.0</span><br><span class="line"></span><br><span class="line">print(type(name))</span><br><span class="line"># type(变量)可以查看类型</span><br><span class="line"></span><br><span class="line">print(name+&#39;小红&#39;)</span><br><span class="line"># 字符串之间的拼接可以用+实现</span><br><span class="line"></span><br><span class="line">print(name*50)</span><br><span class="line"># 字符串*数字可以将n个字符串相连</span><br></pre></td></tr></table></figure>
+<p>Tips:<br>（1） py中变量不用命名类型，会根据赋数值来判断类型，包括str ,int ,bool ,float等可以断点调试查看类型.注意py区分大小写</p>
+<hr>
+<h2 id="常见函数"><a href="#常见函数" class="headerlink" title="常见函数"></a>常见函数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">price &#x3D;float(input(&quot;请输入单价&quot;))</span><br><span class="line">weight &#x3D;float(input(&quot;请输入重量&quot;))</span><br><span class="line"></span><br><span class="line">#转换</span><br><span class="line">sum &#x3D; price*weight</span><br><span class="line">print(sum)</span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">变量 &#x3D; input（“提示信息”） 得到键盘输入变量，此时输入的均认为是str字符串，可用type(变量验证)</span><br><span class="line">int()     float () 两种转换方式</span><br><span class="line">&quot;&quot;&quot;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="格式还输出"><a href="#格式还输出" class="headerlink" title="格式还输出"></a>格式还输出</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># 定义字符串 我的名字叫小明</span><br><span class="line">name &#x3D; &quot;小明&quot;</span><br><span class="line">print(&quot;我的名字叫%s&quot; %name)</span><br><span class="line"></span><br><span class="line"># 单价5.00 一共9.12公斤   总价格</span><br><span class="line">price &#x3D; 5.00</span><br><span class="line">weight &#x3D; 9.12</span><br><span class="line"></span><br><span class="line">sum &#x3D;price * weight</span><br><span class="line">print(&quot;单价是%.2f,总重量是%.2f,总价格是%.2f&quot; %(price,weight,sum)) #  %.2 可以控制保留的小数点数</span><br><span class="line"></span><br><span class="line"># 学号是0001</span><br><span class="line">student_no &#x3D; 1</span><br><span class="line">print(&quot;我的学号是%06d&quot; %student_no)  #  %06d即表示一共六位，右边对齐，不足六位的前面补充0</span><br><span class="line"></span><br><span class="line"># %% 输出%号</span><br><span class="line">scale &#x3D; 0.05</span><br><span class="line">print(&quot;%.2f%%&quot; % (scale*100))</span><br><span class="line">print(&quot;%.2f%%&quot; % scale*10)  #  此时的*表示字符串的拼接</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h1><h2 id="判断"><a href="#判断" class="headerlink" title="判断"></a>判断</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line"># 定义年龄</span><br><span class="line"># 判断是否年满18</span><br><span class="line"># 决定如何做</span><br><span class="line">选择多行文本 ctrl+&quot;&#x2F;&quot;统一单行注释</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">age &#x3D; int(input(&quot;请输入年龄&quot;))</span><br><span class="line">if age &gt;&#x3D; 18 :</span><br><span class="line">    print(&quot;可以去网吧happy&quot;)</span><br><span class="line">else:</span><br><span class="line">    print(&quot;回家写作业&quot;)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="与或非"><a href="#与或非" class="headerlink" title="与或非"></a>与或非</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 年龄小于120 大于0</span><br><span class="line">age &#x3D; 120</span><br><span class="line">if age&gt;&#x3D; 0 and age&lt;&#x3D;120: # if age &lt;&#x3D; 0 or age &gt;&#x3D; 120</span><br><span class="line">    print(&quot;yes&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># bool型变量</span><br><span class="line"># 在开发中通常希望一些条件不满足实行的代码，用到not运算符，拼接条件也有可能用到</span><br><span class="line">is_employee &#x3D; False</span><br><span class="line">if not is_employee:</span><br><span class="line">    print(&quot;请勿入内&quot;)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="elif"><a href="#elif" class="headerlink" title="elif"></a>elif</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#elif 等于else if</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">holiday &#x3D; &quot;平安&quot;</span><br><span class="line">if holiday &#x3D;&#x3D; &quot;圣诞节&quot;:</span><br><span class="line">    print(&quot;买苹🍲果&quot;)</span><br><span class="line">elif holiday &#x3D;&#x3D; &quot;平安夜&quot;:</span><br><span class="line">    print(&quot;吃苹果&quot;)</span><br><span class="line">else:</span><br><span class="line">    print(&quot;null&quot;)</span><br></pre></td></tr></table></figure>
+<p>Tips:<br>（1） 选择多行“tab” 将多行统一右移，”shift”+”tab”再左移回来</p>
+<hr>
+<h2 id="if嵌套"><a href="#if嵌套" class="headerlink" title="if嵌套"></a>if嵌套</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># 大概逻辑</span><br><span class="line"># 判断是否大于20</span><br><span class="line"># 大于20不让过安检</span><br><span class="line"># 小于20让过</span><br><span class="line"># 无刀可以过安检</span><br><span class="line"># 判断是否有刀</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># if后面的判断过长时，可以采用两边加括号在回车的方法如下</span><br><span class="line"># if (()</span><br><span class="line">#         or ()</span><br><span class="line">#         or () )</span><br><span class="line">knife &#x3D; True</span><br><span class="line">knife_long &#x3D; 20</span><br><span class="line">if not knife:</span><br><span class="line">    print(&quot;请尽快通过&quot;)</span><br><span class="line">else:</span><br><span class="line">    if knife_long &gt;&#x3D; 20:</span><br><span class="line">        print(&quot;不准带大于20厘米刀具&quot;)</span><br><span class="line">    else:</span><br><span class="line">        print(&quot;安检通过&quot;)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="随机数加剪刀石头布"><a href="#随机数加剪刀石头布" class="headerlink" title="随机数加剪刀石头布"></a>随机数加剪刀石头布</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># 导入random数据包，使用random.randint(a, b)函数 ,[a,b]包括a与b</span><br><span class="line"># 数据包导入要放到开头，类似于include&lt;stdio&gt;</span><br><span class="line"># 剪刀（1），石头（2），布（3)</span><br><span class="line"># 胜利条件</span><br><span class="line"># 剪刀  胜 布</span><br><span class="line"># 石头  胜 剪刀</span><br><span class="line"># 布   胜 石头</span><br><span class="line"># 判断平局</span><br><span class="line">import random</span><br><span class="line">player &#x3D; int(input(&quot;请输入剪刀石头布，剪刀（1），石头（2），布（3）&quot;))</span><br><span class="line">pc &#x3D; random.randint(1, 3)</span><br><span class="line">if ((player &#x3D;&#x3D; 1 and pc &#x3D;&#x3D; 3)</span><br><span class="line">        or (player &#x3D;&#x3D; 2 and pc &#x3D;&#x3D; 1)</span><br><span class="line">        or(player &#x3D;&#x3D; 3 and pc &#x3D;&#x3D; 2)):</span><br><span class="line"></span><br><span class="line">    print(&quot;你出的是%d,电脑出的是%d&quot; % (player, pc))</span><br><span class="line">    print(&quot;你赢了&quot;)</span><br><span class="line">elif player &#x3D;&#x3D; pc:</span><br><span class="line">    print(&quot;平局&quot;)</span><br><span class="line">else:</span><br><span class="line">    print(&quot;你输了&quot;)</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h1><h2 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i &#x3D; 1</span><br><span class="line">while i &lt;&#x3D; 5 :</span><br><span class="line">    print(&quot;hello&quot;)</span><br><span class="line">    i +&#x3D; 1</span><br><span class="line">print(i)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="求和"><a href="#求和" class="headerlink" title="求和"></a>求和</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># 求100内数字之和</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># i &#x3D; 0</span><br><span class="line"># sum &#x3D; 0</span><br><span class="line"># while i &lt;&#x3D; 100 :</span><br><span class="line">#     sum +&#x3D;1</span><br><span class="line">#     i+&#x3D;1</span><br><span class="line"># print(sum)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 100内偶数求和</span><br><span class="line">i &#x3D; 0</span><br><span class="line">sum &#x3D; 0</span><br><span class="line">while i &lt;&#x3D;100:</span><br><span class="line">    if i%2 &#x3D;&#x3D; 0:</span><br><span class="line">        sum +&#x3D;i</span><br><span class="line">    i+&#x3D;1</span><br><span class="line">print(sum)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="continue-与break"><a href="#continue-与break" class="headerlink" title="continue 与break"></a>continue 与break</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># 大致与c语言相同</span><br><span class="line"># i &#x3D; 0</span><br><span class="line"># while i &lt;&#x3D; 3 :</span><br><span class="line">#     if i&#x3D;&#x3D;2 :</span><br><span class="line">#         break</span><br><span class="line">#</span><br><span class="line">#     i+&#x3D;1</span><br><span class="line"># print(i)</span><br><span class="line"></span><br><span class="line">i &#x3D; 0</span><br><span class="line">while i &lt;&#x3D; 10 :</span><br><span class="line">    if i &#x3D;&#x3D; 9:</span><br><span class="line">        i+&#x3D;1</span><br><span class="line">        continue</span><br><span class="line">    i+&#x3D;1</span><br><span class="line">print(i)</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<h2 id="例子1—单循环打印星星"><a href="#例子1—单循环打印星星" class="headerlink" title="例子1—单循环打印星星"></a>例子1—单循环打印星星</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">row &#x3D; 1</span><br><span class="line">while row &lt;&#x3D; 5:</span><br><span class="line">    print(&quot;*&quot;*row)</span><br><span class="line">    row +&#x3D; 1</span><br><span class="line"></span><br><span class="line"># print会自动添加换行 取消换行 print(&quot;&quot;,end&#x3D;&quot;&quot;)，end后面的内容即是相连的内容</span><br><span class="line"></span><br><span class="line">print(&quot;*&quot;, end&#x3D;&quot;&quot;)</span><br><span class="line">print(&quot;*&quot;)</span><br><span class="line">print(&quot;*&quot;, end&#x3D;&quot;——————&quot;)</span><br><span class="line">print(&quot;*&quot;)</span><br><span class="line">print(&quot;*&quot;)</span><br><span class="line">print(&quot;*&quot;)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="例子2—循环打印星星"><a href="#例子2—循环打印星星" class="headerlink" title="例子2—循环打印星星"></a>例子2—循环打印星星</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">row &#x3D; 1</span><br><span class="line"># while row &lt;&#x3D; 5:</span><br><span class="line">#     col &#x3D; 1</span><br><span class="line">#     while col&lt;&#x3D;row:  #判断是否该换行了</span><br><span class="line">#         if row &#x3D;&#x3D; col:</span><br><span class="line">#             print(&quot;*&quot;)</span><br><span class="line">#         else:</span><br><span class="line">#             print(&quot;*&quot;,end&#x3D;&quot;&quot;)</span><br><span class="line">#         col +&#x3D; 1</span><br><span class="line">#     row +&#x3D; 1</span><br><span class="line"># 第一种</span><br><span class="line"></span><br><span class="line">while row &lt;&#x3D; 5:</span><br><span class="line">    col &#x3D; 1</span><br><span class="line">    while col &lt;&#x3D; row:</span><br><span class="line">        print(&quot;*&quot;, end&#x3D;&quot;&quot;)</span><br><span class="line">        col +&#x3D; 1</span><br><span class="line">    print(&quot;&quot;)  #换行</span><br><span class="line">    row +&#x3D; 1</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="例子3—九九乘法表"><a href="#例子3—九九乘法表" class="headerlink" title="例子3—九九乘法表"></a>例子3—九九乘法表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">row &#x3D; 1</span><br><span class="line">while row &lt;&#x3D; 9 :</span><br><span class="line">    col &#x3D; 1</span><br><span class="line">    while col &lt;&#x3D; row:</span><br><span class="line">        print(&quot;%d * %d &#x3D; %d   &quot; %(row,col,row*col),end&#x3D;&quot;\t&quot;) # \t水平制表符，保证每个左对齐，或者输出用%2d</span><br><span class="line">        col +&#x3D; 1</span><br><span class="line">    print(&quot;&quot;)</span><br><span class="line">    row +&#x3D; 1</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="水平制表符与换位符"><a href="#水平制表符与换位符" class="headerlink" title="水平制表符与换位符"></a>水平制表符与换位符</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># \t 在控制台添加一个制表符，协助在输出文本时候保证垂直方向对齐</span><br><span class="line">print(&quot;1\t2\t3&quot;)</span><br><span class="line">print(&quot;10\t20\t30&quot;)</span><br><span class="line"># \n 换行</span><br><span class="line">print(&quot;hello\nworld&quot;)</span><br><span class="line">#\&quot;  输出双引号</span><br><span class="line">print(&quot;hello \&quot;world&quot;)</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="九九乘法表"><a href="#九九乘法表" class="headerlink" title="九九乘法表"></a>九九乘法表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">def multable_table():</span><br><span class="line"></span><br><span class="line">    row &#x3D; 1</span><br><span class="line">    while row &lt;&#x3D; 9 :</span><br><span class="line">        col &#x3D; 1</span><br><span class="line">        while col &lt;&#x3D; row:</span><br><span class="line">            print(&quot;%d * %d &#x3D; %d   &quot; %(row,col,row*col),end&#x3D;&quot;\t&quot;) # \t水平制表符，保证每个左对齐，或者输出用%2d</span><br><span class="line">            col +&#x3D; 1</span><br><span class="line">        print(&quot;&quot;)</span><br><span class="line">        row +&#x3D; 1</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<h2 id="函数初体验"><a href="#函数初体验" class="headerlink" title="函数初体验"></a>函数初体验</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import lu_01_九九乘法表</span><br><span class="line">lu_01_九九乘法表.multable_table()</span><br><span class="line"></span><br><span class="line"># 即是导入自己写的上个模块的函数，导入后调用</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="Say-Hello函数"><a href="#Say-Hello函数" class="headerlink" title="Say_Hello函数"></a>Say_Hello函数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 在一个文件内调用函数，直接使用函数名即可</span><br><span class="line"># 调用另外一个文件的函数要先用import导入工具包，如上面的01，02文件</span><br><span class="line"># 函数要先命名，才会执行</span><br><span class="line"># f8直接跳过函数，f7挨个执行函数内部</span><br><span class="line"># 定义函数时候上面要留下两行空行</span><br><span class="line"># 函数注释，在函数下方使用“”“ ”“” 方式注释，</span><br><span class="line"># 调用函数时候，使用view--&gt;quick documeng 或ctrl +q 查看</span><br><span class="line">def say_hello():</span><br><span class="line">    &quot;&quot;&quot; 打招呼&quot;&quot;&quot;</span><br><span class="line">    print(&quot;hello,world&quot;)</span><br><span class="line">    print(&quot;hell0&quot;*10)</span><br><span class="line">say_hello()</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<h2 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">def sum(a,b):</span><br><span class="line">    &quot;&quot;&quot; 求和 &quot;&quot;&quot;</span><br><span class="line">    sum1 &#x3D; a+b</span><br><span class="line">    print(&quot;%d + %d &#x3D; %d&quot; % (a,b,sum1))</span><br><span class="line">    return sum1</span><br><span class="line"># retur经是最后了 ，后面的函数不会读取</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sum(10,20)</span><br><span class="line">print(sum(10, 20))</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<h2 id="函数的嵌套"><a href="#函数的嵌套" class="headerlink" title="函数的嵌套"></a><strong><em>函数的嵌套</em></strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def test():</span><br><span class="line">    print(&quot;*&quot;* 50)</span><br><span class="line"></span><br><span class="line">def test1():</span><br><span class="line">    print(&quot;+&quot; *50)</span><br><span class="line">    test()</span><br><span class="line"></span><br><span class="line">test1()</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<h2 id="打印多行分割线"><a href="#打印多行分割线" class="headerlink" title="打印多行分割线"></a>打印多行分割线</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">def print_line(char, times):  # py 中 char非特殊字符，  此时为了打印一行分割线</span><br><span class="line">    &quot;&quot;&quot; 打印一行分割线&quot;&quot;&quot;</span><br><span class="line">    print(char*times)</span><br><span class="line"></span><br><span class="line">def print_mul_line(char,times):  #  光标放在函数名处，点击小灯泡，选择插入文档，insert dcu</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">      打印多行分割线</span><br><span class="line">    :param char: 分割线所用字符</span><br><span class="line">    :param times: 每行分割线字符重复次数</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    row &#x3D; 0</span><br><span class="line">    while row &lt; 5:</span><br><span class="line">        print_line(char,times)</span><br><span class="line">        row+&#x3D;1</span><br></pre></td></tr></table></figure>
+<p>Tips:<br>（1） 选择函数 crtl+q查看文档注释</p>
+<hr>
+<h2 id="模块使用"><a href="#模块使用" class="headerlink" title="模块使用"></a>模块使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 每个.py文件都是一个工具包，使用import导入，下面使用.函数名即可使用</span><br><span class="line"># 同样ctrl+q可以i查看文件内函数的注释</span><br><span class="line"></span><br><span class="line">import lu_06_打印多行分割线</span><br><span class="line">lu_06_打印多行分割线.print_mul_line(&quot;+&quot;, 99) #  调用06中的打印分割线</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<h1 id="高级数据类型"><a href="#高级数据类型" class="headerlink" title="高级数据类型"></a>高级数据类型</h1><h2 id="列表的基本使用"><a href="#列表的基本使用" class="headerlink" title="列表的基本使用"></a>列表的基本使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">name_list &#x3D; [&quot;zhangsan&quot;, &quot;lisi&quot;, &quot;wangwu&quot;]</span><br><span class="line"></span><br><span class="line"># 1.取值和取索引</span><br><span class="line"># list index out of range --列表索引超出范围</span><br><span class="line">print(name_list[0])</span><br><span class="line"></span><br><span class="line"># 知道数据的内容想知道数据所在的位置</span><br><span class="line">print(name_list.index(&quot;zhangsan&quot;))</span><br><span class="line"></span><br><span class="line"># 2.修改内容</span><br><span class="line"># 修改的内容不能超出内存范围</span><br><span class="line">name_list[1] &#x3D; &quot;李四&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 3.列表增加数据</span><br><span class="line"># append 可以在末尾增加一个数据</span><br><span class="line">name_list.append(&quot;王小二&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#insert 可以在指定位置插入一个数据</span><br><span class="line">name_list.insert(2, &quot;小李四&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># extend 方法可以在尾部分追加一个新的列表</span><br><span class="line">temp_list &#x3D; [&quot;一&quot;,&quot;二&quot;,&quot;三&quot;]</span><br><span class="line">name_list.extend(temp_list)</span><br><span class="line"></span><br><span class="line"># 4.删除数据</span><br><span class="line"># remove方法可以移出表中的数据</span><br><span class="line">name_list.remove(&quot;一&quot;)</span><br><span class="line"># pop方法默认删除最后的一个数据</span><br><span class="line">name_list.pop()</span><br><span class="line"># pop可以删除指定位置的函数</span><br><span class="line">name_list.pop(2)</span><br><span class="line"># clear可以删除全部数据</span><br><span class="line">name_list.clear()</span><br><span class="line">print(name_list)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">name_list &#x3D; [&quot;张三&quot;,&quot;李四&quot;,&quot;王五&quot;]</span><br><span class="line"></span><br><span class="line"># del关键字可以删除列表元素</span><br><span class="line">del name_list[1]</span><br><span class="line"># del 本质上是从内存中删除变量，后续便不能使用这个变量</span><br><span class="line">print(name_list)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="列表的数据统计"><a href="#列表的数据统计" class="headerlink" title="列表的数据统计"></a>列表的数据统计</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">name_list &#x3D; [&quot;张三&quot;,&quot;李四&quot;,&quot;王五&quot;, &quot;张三&quot;, &quot;张三&quot;]</span><br><span class="line"></span><br><span class="line"># len 可以查看数组的长度</span><br><span class="line">length &#x3D; len(name_list)</span><br><span class="line">print(&quot;数组长度为 %d 位&quot; %length)</span><br><span class="line"></span><br><span class="line"># count 方法可以统计数组中某一个数据出现的次数</span><br><span class="line">times &#x3D; name_list.count(&quot;张三&quot;)</span><br><span class="line">print(&quot;张三出现的次数为 %d&quot; %times)</span><br><span class="line"></span><br><span class="line"># remove 移除的是第一个</span><br><span class="line">name_list.remove(&quot;张三&quot;)</span><br><span class="line">print(name_list)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">name_list &#x3D; [&quot;张三&quot;,&quot;李四&quot;,&quot;王五&quot;, &quot;张四&quot;, &quot;张五&quot;]</span><br><span class="line">num_list &#x3D; [9,2,3,4,5,6,7,8,]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#升序</span><br><span class="line"># name_list.sort()</span><br><span class="line"># num_list.sort()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 降序</span><br><span class="line"># num_list.sort(reverse&#x3D;True)  #reverse 默认false</span><br><span class="line"></span><br><span class="line"># 逆序</span><br><span class="line">num_list.reverse()</span><br><span class="line">print(name_list)</span><br><span class="line">print(num_list)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="循环遍历"><a href="#循环遍历" class="headerlink" title="循环遍历"></a>循环遍历</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">name_list &#x3D; [&quot;张三&quot;,&quot;李四&quot;,&quot;王五&quot;, &quot;张四&quot;, &quot;张五&quot;]</span><br><span class="line"></span><br><span class="line"># for 变量名 in list</span><br><span class="line">for name in name_list:</span><br><span class="line">    print(&quot;我的名字叫 %s&quot; %name)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="元组及常用方法"><a href="#元组及常用方法" class="headerlink" title="元组及常用方法"></a>元组及常用方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 元组与前面的数组类似，元组建立以后不可以在修改元素数值</span><br><span class="line"># 元组的元素常常有特定的应用情况，元素一般不为统一类型</span><br><span class="line"># 数组可不为统一类型，为了使用方便，常为统一类型</span><br><span class="line"># 建议元组的主要是（，）中的逗号决定</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">info_tuple &#x3D; (&quot;zhangsan&quot;, 18, 1.75)</span><br><span class="line"># 1.取值和取索引</span><br><span class="line">print(info_tuple[0])</span><br><span class="line"># 取索引即是知道数据俄内容，想知道数据的所在位置</span><br><span class="line">print(info_tuple.index(18))</span><br><span class="line"># 统计计数</span><br><span class="line">print(info_tuple.count(&quot;zhangsan&quot;))</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="元组的循环遍历"><a href="#元组的循环遍历" class="headerlink" title="元组的循环遍历"></a>元组的循环遍历</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">info_trouple &#x3D; (&quot;zhangsan&quot;, 18, 1.75)</span><br><span class="line"># 使用迭代循环遍历元组内容</span><br><span class="line">for my_info in info_trouple:</span><br><span class="line">    # 循环遍历内容</span><br><span class="line">    print(my_info)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="格式化字符串"><a href="#格式化字符串" class="headerlink" title="格式化字符串"></a>格式化字符串</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;姓名是%s 年龄%s 身高是%s&quot;  %(&quot;小明&quot;,18,175))</span><br><span class="line"></span><br><span class="line"># 格式化字符串的‘（）’本质上便是元组</span><br><span class="line">info_touple &#x3D; (&quot;小明&quot;,18,175)</span><br><span class="line">print(&quot;姓名是%s 年龄%s 身高是%s&quot;  %info_touple)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">info_str &#x3D; (&quot;姓名是%s 年龄%s 身高是%s&quot;  %info_touple)</span><br><span class="line">print(info_str)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="lu-09-tuple（元组）与list的转换"><a href="#lu-09-tuple（元组）与list的转换" class="headerlink" title="lu_09_tuple（元组）与list的转换"></a>lu_09_tuple（元组）与list的转换</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">test_list &#x3D; [1,2,3,4,5,6]</span><br><span class="line">type(test_list)</span><br><span class="line"># 列表 可修改</span><br><span class="line">test_tuple &#x3D; tuple(test_list)</span><br><span class="line">type(test_tuple)</span><br><span class="line"># 在ipython中查看</span><br><span class="line">TestList &#x3D; list(test_tuple)</span><br><span class="line">type(TestList)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="字典的定义"><a href="#字典的定义" class="headerlink" title="字典的定义"></a>字典的定义</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 字典是一个无序的数据集合，使用print输出字典时候的顺序往往与字典定义的顺序不一致</span><br><span class="line">xiaoming &#x3D; &#123;&quot;name&quot;: &quot;小明&quot;,</span><br><span class="line">            &quot;gender&quot;:True,</span><br><span class="line">            &quot;weight&quot;:75.5,</span><br><span class="line">            &quot;height&quot;:175&#125;</span><br><span class="line">print(xiaoming)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="字典的基本应用"><a href="#字典的基本应用" class="headerlink" title="字典的基本应用"></a>字典的基本应用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">xiaoming_dict &#x3D; &#123;&quot;name&quot;: &quot;小明&quot;,</span><br><span class="line">            &quot;age&quot;: 18,</span><br><span class="line">            &quot;weight&quot;:75.5,</span><br><span class="line">            &quot;height&quot;:175&#125;</span><br><span class="line"># 1.取值</span><br><span class="line">print(xiaoming_dict[&quot;name&quot;])</span><br><span class="line"></span><br><span class="line"># 若取得数值的key 不在会报错</span><br><span class="line"># print(xiaoming[&quot;name123&quot;])</span><br><span class="line"></span><br><span class="line"># 2.增加&#x2F;修改</span><br><span class="line"></span><br><span class="line">xiaoming_dict[&quot;gender&quot;] &#x3D; True</span><br><span class="line"># 若原字典无key，会增加一项</span><br><span class="line"></span><br><span class="line">xiaoming_dict[&quot;age&quot;] &#x3D; 19</span><br><span class="line"># 若字典已经有的key,则会修改key指向的内容</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 3.删除</span><br><span class="line">xiaoming_dict.pop(&quot;age&quot;)</span><br><span class="line"></span><br><span class="line"># 若删除的key值不存在，则报错</span><br><span class="line"># xiaoming_dict.pop(&quot;age123&quot;)</span><br><span class="line"></span><br><span class="line">print(xiaoming_dict)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="字典的基本操作"><a href="#字典的基本操作" class="headerlink" title="字典的基本操作"></a>字典的基本操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">xiaoming_dict &#x3D; &#123;&quot;name&quot;:&quot;小明&quot;,</span><br><span class="line">                 &quot;age&quot;: 12&#125;</span><br><span class="line"># 1.统计键值对数量</span><br><span class="line"></span><br><span class="line">print(len(xiaoming_dict))</span><br><span class="line"></span><br><span class="line"># 2.合并字典</span><br><span class="line"></span><br><span class="line">temp_dict &#x3D; &#123;&quot;height&quot;: 1.75&#125;</span><br><span class="line"># update若已经包含有键值对则会覆盖原来有的数值</span><br><span class="line">xiaoming_dict.update(temp_dict)</span><br><span class="line"></span><br><span class="line"># 3.清空字典</span><br><span class="line">xiaoming_dict.clear()</span><br><span class="line"></span><br><span class="line">print(xiaoming_dict)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="字典的遍历"><a href="#字典的遍历" class="headerlink" title="字典的遍历"></a>字典的遍历</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">xiaoming_dict &#x3D; &#123;&quot;name&quot;:&quot;小明&quot;,</span><br><span class="line">                 &quot;age&quot;: 12,</span><br><span class="line">                 &quot;qq&quot;: &quot;123456&quot;,</span><br><span class="line">                 &quot;phone&quot;:&quot;12345&quot;&#125;</span><br><span class="line"># 遍历迭代键值对</span><br><span class="line"># k是每次循环中的键值对的key dic[k]即是键值对对应的数值</span><br><span class="line">for k in xiaoming_dict:</span><br><span class="line">    print(&quot;%s - %s&quot; %(k, xiaoming_dict[k]))</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="字典的应用场景"><a href="#字典的应用场景" class="headerlink" title="字典的应用场景"></a>字典的应用场景</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># 使用多个键值对存储一个物体的信息 ————描述更加复杂的信息</span><br><span class="line"></span><br><span class="line"># 将多个字典存储在列表中，再进行循环遍历</span><br><span class="line">card_list &#x3D; [&#123;&quot;name&quot;:&quot;小明&quot;,</span><br><span class="line">              &quot;age&quot;: 18,</span><br><span class="line">              &quot;phone&quot;: &quot;123456&quot;,</span><br><span class="line">              &quot;qq&quot;: &quot;1234&quot;&#125;,</span><br><span class="line">             &#123;&quot;name&quot;:&quot;小红&quot;,</span><br><span class="line">              &quot;age&quot;: 18,</span><br><span class="line">              &quot;phone&quot;: &quot;987456&quot;,</span><br><span class="line">              &quot;qq&quot;: &quot;4321&quot;&#125;</span><br><span class="line"></span><br><span class="line">]</span><br><span class="line">for card_info in card_list:</span><br><span class="line"></span><br><span class="line">    print(card_info)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="字符串的定义与遍历"><a href="#字符串的定义与遍历" class="headerlink" title="字符串的定义与遍历"></a>字符串的定义与遍历</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 注意区分双引号与单引号</span><br><span class="line">str1 &#x3D; &quot;我的名字是小红&quot;</span><br><span class="line">str2 &#x3D; &#39;我的名字是&quot;小红&quot;&#39;</span><br><span class="line">print(str2)</span><br><span class="line"></span><br><span class="line">print(str1[3])</span><br><span class="line">for char in str2:</span><br><span class="line">    print(char)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="字符串的常用方法"><a href="#字符串的常用方法" class="headerlink" title="字符串的常用方法"></a>字符串的常用方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">hello_str &#x3D; &quot;hello hello&quot;</span><br><span class="line"># 统计字符串的长度</span><br><span class="line">print(len(hello_str))</span><br><span class="line"># 统计字符串出现的次数</span><br><span class="line">print(hello_str.count(&quot;llo&quot;))</span><br><span class="line">print(hello_str.count(&quot;llo0&quot;))</span><br><span class="line"></span><br><span class="line"># 查看某一个字符串出现的位置 ,若字符不存在则会报错</span><br><span class="line"></span><br><span class="line">print(hello_str.index(&quot;lo&quot;))</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="字符串的查找与替换"><a href="#字符串的查找与替换" class="headerlink" title="字符串的查找与替换"></a>字符串的查找与替换</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">str_test &#x3D; &quot;hello hello&quot;</span><br><span class="line"># 1.察看是否以指定的开头</span><br><span class="line">print(str_test.startswith(&quot;hell&quot;))</span><br><span class="line"># 2.判断是否以指定的字符串结尾</span><br><span class="line">print(str_test.endswith(&quot;o&quot;))</span><br><span class="line"># 3.查找制定的字符串</span><br><span class="line">print(str_test.find(&quot;H&quot;))  #不存在返回-1， 不会和index一样返回错误</span><br><span class="line">print(str_test.find(&quot;llo&quot;)) # 返回所在位置</span><br><span class="line"># 4.替换字符串</span><br><span class="line"># replace会返回一个新的字符串，但不会修改原来字符串的数值</span><br><span class="line">print(str_test.replace(&quot;hello&quot;,&quot;python&quot;))</span><br><span class="line">print(str_test)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="文本居中对齐"><a href="#文本居中对齐" class="headerlink" title="文本居中对齐"></a>文本居中对齐</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 顺序且居中表现文字</span><br><span class="line">poem &#x3D; [&quot;登鹳雀楼&quot;,</span><br><span class="line">        &quot;王之涣&quot;,</span><br><span class="line">        &quot;白日依山尽，&quot;,</span><br><span class="line">        &quot;黄河入海流。&quot;,</span><br><span class="line">        &quot;欲穷千里目，&quot;,</span><br><span class="line">        &quot;更上一层楼。&quot;]</span><br><span class="line">for poet_str in poem:</span><br><span class="line">    # print(poet_str)</span><br><span class="line">    # print(poet_str.center(100))</span><br><span class="line">    # print(&quot;|%s|&quot; %poet_str.center(10, &quot; &quot;))</span><br><span class="line">    # print(&quot;|%s|&quot; % poet_str.ljust(10, &quot; &quot;)) # 右边对齐</span><br><span class="line">    print(&quot;|%s|&quot; % poet_str.rjust(10, &quot; &quot;))</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="去除空白字符"><a href="#去除空白字符" class="headerlink" title="去除空白字符"></a>去除空白字符</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">poem &#x3D; [&quot;\t\n登鹳雀楼&quot;,</span><br><span class="line">        &quot;王之涣&quot;,</span><br><span class="line">        &quot;白日依山尽，&quot;,</span><br><span class="line">        &quot;黄河入海流。&quot;,</span><br><span class="line">        &quot;欲穷千里目，\t\n&quot;,</span><br><span class="line">        &quot;更上一层楼。&quot;]</span><br><span class="line">for poem_str in poem:</span><br><span class="line">    # 使用strip方法去除空白字符，</span><br><span class="line">    # 再使用center居中即可</span><br><span class="line">    print(&quot;|%s|&quot; % poem_str.strip().rjust(10, &quot; &quot;))</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="字符的拆分与连接"><a href="#字符的拆分与连接" class="headerlink" title="字符的拆分与连接"></a>字符的拆分与连接</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">poem &#x3D; &quot;登鹳雀楼\t王之涣\t白日依山尽\t\n黄河入海流\t欲穷千里目\t\n更上一层楼\t&quot;</span><br><span class="line">print(poem)</span><br><span class="line"># 将空白字符去掉</span><br><span class="line"># 使用“”为分割符，拼接成为一个新的字符串</span><br><span class="line"># 1.拆分字符串</span><br><span class="line">poem_list &#x3D; poem.split()</span><br><span class="line">print(poem_list)</span><br><span class="line"># 2.合并字符串</span><br><span class="line">result &#x3D; &quot; &quot;.join(poem_list)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="for的循环"><a href="#for的循环" class="headerlink" title="for的循环"></a>for的循环</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">for k in [1,2,3]:</span><br><span class="line">    print(k)</span><br><span class="line">    if k &#x3D;&#x3D; 2:</span><br><span class="line">        # 如果有break则不会执行else下的，否则都会执行</span><br><span class="line">        break</span><br><span class="line">else:</span><br><span class="line">    print(&quot;是否会执行&quot;)</span><br><span class="line">print(&quot;最后结束&quot;)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="用for遍历字典"><a href="#用for遍历字典" class="headerlink" title="用for遍历字典"></a>用for遍历字典</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">students &#x3D; [&#123;&quot;name&quot;: &quot;阿土&quot;&#125;,</span><br><span class="line">            &#123;&quot;name&quot;: &quot;小美&quot;&#125;]</span><br><span class="line">find_name &#x3D; &quot;阿土1&quot;</span><br><span class="line">for stu_name in students:</span><br><span class="line">    print(stu_name)</span><br><span class="line">    if stu_name[&quot;name&quot;] &#x3D;&#x3D; find_name:</span><br><span class="line">        print(&quot;找到了 %s&quot; % find_name)</span><br><span class="line">        #如果找到则推出</span><br><span class="line">        break</span><br><span class="line">else:  #else 在for循环完也会执行</span><br><span class="line">    #未找到则推出</span><br><span class="line">    print(&quot;未找到&quot;)</span><br><span class="line">print(&quot;循环结束&quot;)</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="名片管理系统"><a href="#名片管理系统" class="headerlink" title="名片管理系统"></a>名片管理系统</h1><h2 id="cards-main-py"><a href="#cards-main-py" class="headerlink" title="cards_main.py"></a>cards_main.py</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">#! &#x2F;usr&#x2F;bin&#x2F;python3</span><br><span class="line"></span><br><span class="line"># #！即是sheban，在linux下相当于指定文件打开的程序的路径，在终端中使用which+程序名称查看文件的路径</span><br><span class="line">import cards_tools</span><br><span class="line"></span><br><span class="line"># while循环，直到用户决定退出</span><br><span class="line">while True:</span><br><span class="line"></span><br><span class="line">    # TODO(小明) 显示功能菜单</span><br><span class="line">    # TODO表示提示自己将要做的事情，在下面的6.todo可以查看</span><br><span class="line">    cards_tools.show_menu()</span><br><span class="line">    action_str &#x3D; input(&quot;请输入想要执行的操作 ：&quot;)</span><br><span class="line">    print(&quot;您选择的操作是 【%s】&quot; % action_str )</span><br><span class="line"></span><br><span class="line">    # 1,2,3是针对文件的操作</span><br><span class="line">    # 不使用int转义，防止输入的不是数字</span><br><span class="line">    if action_str in [&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]:</span><br><span class="line"></span><br><span class="line">        # 查询名片</span><br><span class="line">        if action_str &#x3D;&#x3D; &quot;1&quot;:</span><br><span class="line">            # pass</span><br><span class="line">            cards_tools.new_card()</span><br><span class="line"></span><br><span class="line">        # 显示全部名片</span><br><span class="line">        elif action_str &#x3D;&#x3D; &quot;2&quot;:</span><br><span class="line">            cards_tools.show_all()</span><br><span class="line">        # 新增名片</span><br><span class="line">        elif action_str &#x3D;&#x3D; &quot;3&quot;:</span><br><span class="line">            # pass</span><br><span class="line">             cards_tools.search_card()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        # pass表示不写分支代码</span><br><span class="line">        # 表示占位符，可以正常执行，不会执行任何操作</span><br><span class="line">        pass</span><br><span class="line">    # 0 是退出名片的操作系统</span><br><span class="line">    elif action_str &#x3D;&#x3D; &quot;0&quot;:</span><br><span class="line"></span><br><span class="line">        print(&quot;欢迎再次使用名片管理系统！&quot;)</span><br><span class="line">        break</span><br><span class="line">        # pass</span><br><span class="line"></span><br><span class="line">    #其他内容表示输入错误，需要提示用户</span><br><span class="line">    else:</span><br><span class="line">        print(&quot;您输入有误！请重新输入&quot;)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="card-tools-py"><a href="#card-tools-py" class="headerlink" title="card_tools.py"></a>card_tools.py</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br></pre></td><td class="code"><pre><span class="line"># 记录所有名片的字典</span><br><span class="line">card_list &#x3D; []</span><br><span class="line"></span><br><span class="line">def show_menu():</span><br><span class="line"></span><br><span class="line">    &quot;&quot;&quot;显示功能菜单&quot;&quot;&quot;</span><br><span class="line">    print(&quot;*&quot; * 50 )</span><br><span class="line">    print(&quot;欢迎使用【名片管理系统 V 1.0】&quot;)</span><br><span class="line">    print(&quot;&quot;)</span><br><span class="line">    print(&quot;1. 新增名片&quot;)</span><br><span class="line">    print(&quot;2. 显示全部&quot;)</span><br><span class="line">    print(&quot;3. 搜索名片&quot;)</span><br><span class="line">    print(&quot;&quot;)</span><br><span class="line">    print(&quot;0. 推出系统&quot;)</span><br><span class="line">    print(&quot;*&quot; * 50)</span><br><span class="line"></span><br><span class="line">def new_card():</span><br><span class="line"></span><br><span class="line">    &quot;&quot;&quot;新增名片&quot;&quot;&quot;</span><br><span class="line">    print(&quot;-&quot; * 50)</span><br><span class="line">    print(&quot;新增名片&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    # 1. 提示用户输入名片的详细信息</span><br><span class="line">    # 提示：系统修改变量，光标放置变量中，右键refactor,选择rename,选择中间那个</span><br><span class="line">    name_str &#x3D; input(&quot;请输入姓名:&quot;)</span><br><span class="line">    phone_str &#x3D; input(&quot;请输入电话:&quot;)</span><br><span class="line">    qq_str &#x3D; input(&quot;请输入qq:&quot;)</span><br><span class="line">    email_str &#x3D; input(&quot;请输入电子邮箱：&quot;)</span><br><span class="line"></span><br><span class="line">    # 2. 使用用户输入的信息建立一个字典</span><br><span class="line">    card_dict &#x3D; &#123;&quot;name&quot;: name_str,</span><br><span class="line">                 &quot;phone&quot;: phone_str,</span><br><span class="line">                 &quot;qq&quot;: qq_str,</span><br><span class="line">                 &quot;email&quot;: email_str&#125;</span><br><span class="line"></span><br><span class="line">    # 3. 将信息添加到字典中 ,append是追加到字典中</span><br><span class="line">    card_list.append(card_dict)</span><br><span class="line">    print(card_list)</span><br><span class="line"></span><br><span class="line">    # 4. 提示用户输入成功</span><br><span class="line">    print(&quot;添加 %s 成功！&quot; % name_str)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def show_all():</span><br><span class="line"></span><br><span class="line">    &quot;&quot;&quot;显示所有名片&quot;&quot;&quot;</span><br><span class="line">    print(&quot;-&quot; * 50)</span><br><span class="line">    print(&quot;显示所有名片&quot;)</span><br><span class="line"></span><br><span class="line">    # 判断是否有数据,若没有数据则返回</span><br><span class="line">    if len(card_list) &#x3D;&#x3D; 0:</span><br><span class="line">        print(&quot;没有数据，请使用新增加名片功能添加！&quot;)</span><br><span class="line">        return</span><br><span class="line"></span><br><span class="line">        # return 可以返回一个数值</span><br><span class="line">        # return 后面的代码不会执行</span><br><span class="line">        # return 后面不添加任何数，表示会返回到数据的调用位置</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    #打印表头</span><br><span class="line">    for name in [&quot;姓名&quot;,&quot;电话&quot;,&quot;qq&quot;,&quot;邮箱&quot;]:</span><br><span class="line">        print(name, end&#x3D;&quot;\t\t&quot;)</span><br><span class="line">    print(&quot;&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    #打印分割线</span><br><span class="line">    print(&quot;&#x3D;&quot;*50)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    # 遍历列表，显示数据</span><br><span class="line">    for card_dict in card_list:</span><br><span class="line">        print(&quot;%s\t\t%s\t\t%s\t\t%s&quot; % (card_dict[&quot;name&quot;],</span><br><span class="line">                                        card_dict[&quot;phone&quot;],</span><br><span class="line">                                        card_dict[&quot;qq&quot;],</span><br><span class="line">                                        card_dict[&quot;email&quot;]))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def search_card():</span><br><span class="line"></span><br><span class="line">    &quot;&quot;&quot;搜索名片&quot;&quot;&quot;</span><br><span class="line">    print(&quot;-&quot; * 50)</span><br><span class="line">    print(&quot;搜索名片&quot;)</span><br><span class="line"></span><br><span class="line">    # 1.提示用户的输入搜索的姓名</span><br><span class="line">    find_name &#x3D; input(&quot;请输入要搜索的姓名： &quot;)</span><br><span class="line"></span><br><span class="line">    # 2.遍历列表查看姓名，若为未查询到，则会提示用户</span><br><span class="line">    for card_dict in card_list:</span><br><span class="line">        if card_dict[&quot;name&quot;] &#x3D;&#x3D; find_name:</span><br><span class="line">            print(&quot;姓名\t\t电话\t\tqq\t\t邮箱\t\t&quot;)</span><br><span class="line">            print(&quot;&#x3D;&quot; * 50)</span><br><span class="line">            print(&quot;%s\t\t%s\t\t%s\t\t%s&quot; % (card_dict[&quot;name&quot;],</span><br><span class="line">                                            card_dict[&quot;phone&quot;],</span><br><span class="line">                                            card_dict[&quot;qq&quot;],</span><br><span class="line">                                            card_dict[&quot;email&quot;]))</span><br><span class="line"></span><br><span class="line">            deal_card(card_dict)</span><br><span class="line">            break</span><br><span class="line">    else:</span><br><span class="line">        print(&quot;抱歉，没有找到 %s 的信息&quot; % find_name)</span><br><span class="line"></span><br><span class="line">def deal_card(card_dict):</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    处理查找到的名片</span><br><span class="line">    :param card_dict: 要处理的名片</span><br><span class="line">    :return:</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    print(card_dict)</span><br><span class="line">    action_str &#x3D; input(&quot;请输入要执行的操作&quot;</span><br><span class="line">                       &quot; 【1】 修改 【2】 删除 【0】 返回上级菜单&quot;)</span><br><span class="line">    if action_str &#x3D;&#x3D; &quot;1&quot;:</span><br><span class="line">        card_dict[&quot;name&quot;] &#x3D; input_card_info(card_dict[&quot;name&quot;] ,&quot;请输入要修改的姓名【回车不修改】&quot;)</span><br><span class="line">        card_dict[&quot;phone&quot;] &#x3D; input_card_info(card_dict[&quot;phone&quot;],&quot;请输入要修改的电话【回车不修改】&quot;)</span><br><span class="line">        card_dict[&quot;qq&quot;] &#x3D; input_card_info(card_dict[&quot;qq&quot;],&quot;请输入要修改的qq【回车不修改】&quot;)</span><br><span class="line">        card_dict[&quot;email&quot;] &#x3D; input_card_info(card_dict[&quot;email&quot;],&quot;请输入要修改的邮箱【回车不修改】&quot;)</span><br><span class="line">        print(&quot;修改成功！&quot;)</span><br><span class="line">    elif action_str &#x3D;&#x3D; &quot;2&quot;:</span><br><span class="line">        card_list.remove(card_dict)</span><br><span class="line">        print(&quot;删除 %s 成功！&quot; % card_dict[&quot;name&quot;])</span><br><span class="line"></span><br><span class="line">def input_card_info(dict_value, tip_message):</span><br><span class="line"></span><br><span class="line">    &quot;&quot;&quot;定义函数的修改时候输入，防止直接回车导致信息为空</span><br><span class="line">    :param dict_value: 字典的数值</span><br><span class="line">    :param tip_message: 用户提示信息</span><br><span class="line">    :return:</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    # 上面是注释文档，光标放在函数名字上，选择灯泡，选择add document string 即可添加</span><br><span class="line">    # 文档注释也可以像正常的三个逗号注释加一个回车即可</span><br><span class="line">    # 1.系统提示输入</span><br><span class="line">    reasult_str &#x3D; input(tip_message)</span><br><span class="line">    # 2.针对用户的输入进行判断，输入的有数值，直接返回</span><br><span class="line">    if len(reasult_str) &gt; 0:</span><br><span class="line">        return reasult_str</span><br><span class="line">    # 3.若输入的无数值，则直接返回原来字典里的数值</span><br><span class="line">    else:</span><br><span class="line">        return dict_value</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="面对对象基础"><a href="#面对对象基础" class="headerlink" title="面对对象基础"></a>面对对象基础</h1><h2 id="第一个面对对象"><a href="#第一个面对对象" class="headerlink" title="第一个面对对象"></a>第一个面对对象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">类认为是图纸</span><br><span class="line">对象认为是图纸建成的事物。图纸唯一，事物有多个</span><br><span class="line">属性是事物的特点</span><br><span class="line">方法是事物的行为</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">class Cat:</span><br><span class="line">    # 类名要符合大驼峰命名法</span><br><span class="line">    def eat(self):</span><br><span class="line">        print(&quot;小猫爱吃鱼&quot;)</span><br><span class="line"></span><br><span class="line">    def drink(self):</span><br><span class="line">        print(&quot;小猫爱喝水&quot;)</span><br><span class="line"></span><br><span class="line">#创建猫对象</span><br><span class="line">tom &#x3D; Cat()</span><br><span class="line"></span><br><span class="line">#调用类里面的方法</span><br><span class="line">tom.eat()</span><br><span class="line">tom.drink()</span><br><span class="line"></span><br><span class="line"># 此时引用的概念仍然适用</span><br><span class="line">print(tom)</span><br><span class="line"># _main__.Cat 在输出中就是表示由哪一个类创建的</span><br><span class="line"># id 查看地址</span><br><span class="line">addr &#x3D; id(tom)</span><br><span class="line">print(&quot;%x&quot; % addr)</span><br><span class="line"># %x十六进制打印</span><br><span class="line"># %d是十进制打印</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="创建两个猫对象"><a href="#创建两个猫对象" class="headerlink" title="创建两个猫对象"></a>创建两个猫对象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">class Cat:</span><br><span class="line">    # 类名要符合大驼峰命名法</span><br><span class="line">    def eat(self):</span><br><span class="line">        print(&quot;小猫爱吃鱼&quot;)</span><br><span class="line"></span><br><span class="line">    def drink(self):</span><br><span class="line">        print(&quot;小猫爱喝水&quot;)</span><br><span class="line"></span><br><span class="line">#创建对象</span><br><span class="line">tom &#x3D; Cat()</span><br><span class="line">tom.drink()</span><br><span class="line">tom.eat()</span><br><span class="line">print(tom)</span><br><span class="line"></span><br><span class="line">#在创建一个对象</span><br><span class="line">lazy_cat &#x3D; Cat()</span><br><span class="line">lazy_cat.eat()</span><br><span class="line">lazy_cat.drink()</span><br><span class="line">print(lazy_cat)</span><br><span class="line"></span><br><span class="line"># 地址并不一样,cat与lazy_cat不是一只猫</span><br><span class="line">lazy_cat2 &#x3D; lazy_cat</span><br><span class="line">print(lazy_cat2)</span><br><span class="line"># lazy_cat与；lazy_cat2是一只猫</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="设置对象属性"><a href="#设置对象属性" class="headerlink" title="设置对象属性"></a>设置对象属性</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">class Cat:</span><br><span class="line">    # 类名要符合大驼峰命名法</span><br><span class="line">    def eat(self):</span><br><span class="line">        # 哪一个对象调用的方法，self即是哪一个对象的引用，self.属性显示调用该对象的属性</span><br><span class="line">        print(&quot;%s 爱吃鱼&quot; % self.name)</span><br><span class="line"></span><br><span class="line">    def drink(self):</span><br><span class="line">        print(&quot;%s 爱喝水&quot; %self.name)</span><br><span class="line"></span><br><span class="line">#创建对象</span><br><span class="line">tom &#x3D; Cat()</span><br><span class="line"></span><br><span class="line"># 可以利用 .属性名 + 赋值语句即可给对象增加属性，简单但并不推荐</span><br><span class="line"># 对比lazy_cat 单布调试看到lazy_cat并无name属性</span><br><span class="line">tom.name &#x3D; &quot;Tom&quot;</span><br><span class="line">tom.drink()</span><br><span class="line">tom.eat()</span><br><span class="line">print(tom)</span><br><span class="line"></span><br><span class="line">#在创建一个对象</span><br><span class="line">lazy_cat &#x3D; Cat()</span><br><span class="line">lazy_cat.name &#x3D; &quot;大懒猫&quot;</span><br><span class="line">lazy_cat.eat()</span><br><span class="line">lazy_cat.drink()</span><br><span class="line">print(lazy_cat)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="初始化方法"><a href="#初始化方法" class="headerlink" title="初始化方法"></a>初始化方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class Cat():</span><br><span class="line">    def __init__(self):</span><br><span class="line">        print(&quot;这是一个初始化方法&quot;)</span><br><span class="line">        # self.属性名 &#x3D; “初始值”  给对象赋予一个属性以及初始数值</span><br><span class="line">        self.name &#x3D; &quot;Tom&quot;</span><br><span class="line"># 使用类名（）创建对象时候会自动调用初始化方法__init__</span><br><span class="line">tom &#x3D; Cat()</span><br><span class="line">print(tom.name)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="利用函数参数传递属性的初始数值"><a href="#利用函数参数传递属性的初始数值" class="headerlink" title="利用函数参数传递属性的初始数值"></a>利用函数参数传递属性的初始数值</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Cat():</span><br><span class="line">    def __init__(self, new_name):</span><br><span class="line">        print(&quot;这是一个初始化方法&quot;)</span><br><span class="line">        # self.属性名 &#x3D; “初始值”  给对象赋予一个属性以及初始数值</span><br><span class="line">        # self.name &#x3D; &quot;Tom&quot;</span><br><span class="line">        self.name &#x3D; new_name</span><br><span class="line"></span><br><span class="line">    def eat(self):</span><br><span class="line">        print(&quot; %s 爱吃鱼&quot; % self.name)</span><br><span class="line"># 使用类名（）创建对象时候会自动调用初始化方法__init__</span><br><span class="line">tom &#x3D; Cat(&quot;tom&quot;)</span><br><span class="line">print(tom.name)</span><br><span class="line"></span><br><span class="line">lazy_cat &#x3D; Cat(&quot;lazy_cat&quot;)</span><br><span class="line">print(lazy_cat.name)</span><br><span class="line">lazy_cat.eat()</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="del方法"><a href="#del方法" class="headerlink" title="del方法"></a><strong>del</strong>方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class  Cat():</span><br><span class="line">    def __init__(self, new_name):</span><br><span class="line">        self.name &#x3D; new_name</span><br><span class="line">        print(&quot;%s 来了&quot; % self.name)</span><br><span class="line">    #__init__是初始化的方法</span><br><span class="line"></span><br><span class="line">    def __del__(self):</span><br><span class="line">        print(&quot;%s 去了&quot; %self.name)</span><br><span class="line">     # __del__方法是在对象回收之前执行的最后代码</span><br><span class="line">    # 而下面的tom是全局变量，因此是在全部执行完之后才会释放tom ，即是执行__del__方法</span><br><span class="line">tom &#x3D; Cat(&quot;TOM&quot;)</span><br><span class="line">print(tom.name)</span><br><span class="line"># del tom</span><br><span class="line">print(&quot;-&quot;*50)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="str方法"><a href="#str方法" class="headerlink" title="str方法"></a><strong>str</strong>方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class  Cat():</span><br><span class="line">    def __init__(self, new_name):</span><br><span class="line">        self.name &#x3D; new_name</span><br><span class="line">        print(&quot;%s 来了&quot; % self.name)</span><br><span class="line">    #__init__是初始化的方法</span><br><span class="line"></span><br><span class="line">    def __del__(self):</span><br><span class="line">        print(&quot;%s 去了&quot; %self.name)</span><br><span class="line">     # __del__方法是在对象回收之前执行的最后代码</span><br><span class="line">    # 而下面的tom是全局变量，因此是在全部执行完之后才会释放tom ，即是执行__del__方法</span><br><span class="line"></span><br><span class="line">    def __str__(self):</span><br><span class="line">        return &quot;我是[%s]&quot; %self.name</span><br><span class="line">    #希望打印对象,返回自定义内容时候用__str__方法，但是注意只能返回字符串</span><br><span class="line">tom &#x3D; Cat(&quot;TOM&quot;)</span><br><span class="line">print(tom)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="例—小明爱跑步"><a href="#例—小明爱跑步" class="headerlink" title="例—小明爱跑步"></a>例—小明爱跑步</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">#定义一个小明，跑步体重减0.5，吃饭加1</span><br><span class="line">class person:</span><br><span class="line">    #初始化定义属性</span><br><span class="line">    def __init__(self,name, weight):</span><br><span class="line">        self.name &#x3D; name</span><br><span class="line">        self.weight &#x3D; weight</span><br><span class="line"></span><br><span class="line">    #自定义print属性名时候的输出内容</span><br><span class="line">    def __str__(self):</span><br><span class="line">        return &quot;我的名字叫 %s ,我的体重是 %.2f 公斤&quot; %(self.name, self.weight)</span><br><span class="line"></span><br><span class="line">    # 定义跑步方法</span><br><span class="line">    def run(self):</span><br><span class="line">        print(&quot;我叫做 %s ，跑步锻炼身体 &quot; %self.name)</span><br><span class="line">        self.weight -&#x3D; 0.5</span><br><span class="line"></span><br><span class="line">    # 定义吃饭方法</span><br><span class="line">    #在对象内部可以直接访问对象属性</span><br><span class="line">    def eat(self):</span><br><span class="line">        print(&quot;我叫做 %s ,吃饱才有力气减肥&quot; %self.name)</span><br><span class="line">        self.weight +&#x3D;1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 使用类建立对象</span><br><span class="line">xiaoming &#x3D; person(&quot;小明&quot;, 75)</span><br><span class="line">xiaoming.eat()</span><br><span class="line">xiaoming.run()</span><br><span class="line">print(xiaoming)</span><br><span class="line"></span><br><span class="line">#创建第二个对象</span><br><span class="line"># 两个对象互不影响</span><br><span class="line">xiaomei &#x3D; person(&quot;小美&quot;, 45)</span><br><span class="line">xiaomei.run()</span><br><span class="line">xiaomei.eat()</span><br><span class="line">print(xiaomei)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="例—家具类的建立"><a href="#例—家具类的建立" class="headerlink" title="例—家具类的建立"></a>例—家具类的建立</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class HouseItem:</span><br><span class="line">    def __init__(self,name,area):</span><br><span class="line">        self.name &#x3D; name</span><br><span class="line">        self.area &#x3D; area</span><br><span class="line"></span><br><span class="line">    def __str__(self):</span><br><span class="line">        return &quot;%s 占地面积为 %0.2f &quot; % (self.name, self.area)</span><br><span class="line"></span><br><span class="line">#1. 创建家具</span><br><span class="line">bed &#x3D; HouseItem(&quot;床&quot;, 4)</span><br><span class="line">chest &#x3D; HouseItem(&quot;柜子&quot;, 5)</span><br><span class="line">table &#x3D; HouseItem(&quot;桌子&quot;, 1.5)</span><br><span class="line">print(bed)</span><br><span class="line">print(chest)</span><br><span class="line">print(table)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="房子类的建立"><a href="#房子类的建立" class="headerlink" title="房子类的建立"></a>房子类的建立</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">class HouseItem:</span><br><span class="line">    def __init__(self,name,area):</span><br><span class="line">        self.name &#x3D; name</span><br><span class="line">        self.area &#x3D; area</span><br><span class="line"></span><br><span class="line">    def __str__(self):</span><br><span class="line">        return &quot;%s 占地面积为 %0.2f &quot; % (self.name, self.area)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class House:</span><br><span class="line">    def __init__(self,house_type,area):</span><br><span class="line">        self.house_type &#x3D; house_type</span><br><span class="line">        self.area &#x3D; area</span><br><span class="line"></span><br><span class="line">        #定义剩余面积</span><br><span class="line">        self.free_area &#x3D; area</span><br><span class="line"></span><br><span class="line">        # 定义家具列表</span><br><span class="line">        self.item_list &#x3D; []</span><br><span class="line"></span><br><span class="line">     #对房子的属性进行返回</span><br><span class="line">    def __str__(self):</span><br><span class="line">        #python 可以将一个小括号的字符串连接</span><br><span class="line">        return (&quot;户型： %s\n总面积： %.2f[剩余%.2f]\n家具：%s&quot;</span><br><span class="line">                %(self.house_type, self.area,</span><br><span class="line">                  self.free_area,self.item_list))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    # 添加家具</span><br><span class="line">    def add_item(self,item):</span><br><span class="line">        print(&quot;要添加 %s &quot; % item)</span><br><span class="line">#1. 创建家具</span><br><span class="line">bed &#x3D; HouseItem(&quot;床&quot;, 4)</span><br><span class="line">chest &#x3D; HouseItem(&quot;柜子&quot;, 5)</span><br><span class="line">table &#x3D; HouseItem(&quot;桌子&quot;, 1.5)</span><br><span class="line">print(bed)</span><br><span class="line">print(chest)</span><br><span class="line">print(table)</span><br><span class="line"></span><br><span class="line"># 2.创建房子类型</span><br><span class="line">my_home &#x3D; House(&quot;两室一厅&quot;, 100)</span><br><span class="line">my_home.add_item(bed)</span><br><span class="line">my_home.add_item(chest)</span><br><span class="line">my_home.add_item(table)</span><br><span class="line">print(my_home)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="添加家具实体"><a href="#添加家具实体" class="headerlink" title="添加家具实体"></a>添加家具实体</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">class HouseItem:</span><br><span class="line">    def __init__(self,name,area):</span><br><span class="line">        self.name &#x3D; name</span><br><span class="line">        self.area &#x3D; area</span><br><span class="line"></span><br><span class="line">    def __str__(self):</span><br><span class="line">        return &quot;%s 占地面积为 %0.2f &quot; % (self.name, self.area)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class House:</span><br><span class="line">    def __init__(self,house_type,area):</span><br><span class="line">        self.house_type &#x3D; house_type</span><br><span class="line">        self.area &#x3D; area</span><br><span class="line"></span><br><span class="line">        #定义剩余面积</span><br><span class="line">        self.free_area &#x3D; area</span><br><span class="line"></span><br><span class="line">        # 定义家具列表</span><br><span class="line">        self.item_list &#x3D; []</span><br><span class="line"></span><br><span class="line">     #对房子的属性进行返回</span><br><span class="line">    def __str__(self):</span><br><span class="line">        #python 可以将一个小括号的字符串连接</span><br><span class="line">        return (&quot;户型： %s\n总面积： %.2f[剩余%.2f]\n家具：%s&quot;</span><br><span class="line">                %(self.house_type, self.area,</span><br><span class="line">                  self.free_area,self.item_list))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    # 添加家具</span><br><span class="line">    def add_item(self,item):</span><br><span class="line">        print(&quot;要添加 %s &quot; % item)</span><br><span class="line">        #1.判断家具的面积，看是否大于剩余面积</span><br><span class="line">        if item.area &gt; self.free_area:</span><br><span class="line">            print(&quot;%s 的面积太大了，无法添加&quot; %item.name)</span><br><span class="line">            return</span><br><span class="line">        #return后面的代码不执行</span><br><span class="line"></span><br><span class="line">        #2.将家具添加在家具列表</span><br><span class="line">        self.item_list.append(item.name)</span><br><span class="line"></span><br><span class="line">        #3.计算剩余面积</span><br><span class="line">        self.free_area -&#x3D; item.area</span><br><span class="line"></span><br><span class="line">#1. 创建家具</span><br><span class="line">bed &#x3D; HouseItem(&quot;床&quot;, 4)</span><br><span class="line">chest &#x3D; HouseItem(&quot;柜子&quot;, 5)</span><br><span class="line">table &#x3D; HouseItem(&quot;桌子&quot;, 1.5)</span><br><span class="line">print(bed)</span><br><span class="line">print(chest)</span><br><span class="line">print(table)</span><br><span class="line"></span><br><span class="line"># 2.创建房子类型</span><br><span class="line">my_home &#x3D; House(&quot;两室一厅&quot;, 100)</span><br><span class="line">my_home.add_item(bed)</span><br><span class="line">my_home.add_item(chest)</span><br><span class="line">my_home.add_item(table)</span><br><span class="line">print(my_home)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="例—士兵突击-01枪类"><a href="#例—士兵突击-01枪类" class="headerlink" title="例—士兵突击-01枪类"></a>例—士兵突击-01枪类</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">class gun:</span><br><span class="line">    def __init__(self,model):</span><br><span class="line">        # 手枪型号</span><br><span class="line">        self.model &#x3D; model</span><br><span class="line">        # 子弹数目</span><br><span class="line">        self.bullet_count &#x3D; 0</span><br><span class="line"></span><br><span class="line">        # 装弹</span><br><span class="line">    def add_bullet(self,count):</span><br><span class="line">        self.bullet_count +&#x3D; count</span><br><span class="line"></span><br><span class="line">        # 射击方法</span><br><span class="line">    def shoot(self):</span><br><span class="line">        # 1.判断子弹数量</span><br><span class="line">        if self.bullet_count &lt;&#x3D; 0:</span><br><span class="line">            print(&quot;【%s】子弹数量不足，请装弹&quot; % self.model)</span><br><span class="line">            return</span><br><span class="line"></span><br><span class="line">        # 2.发射子弹 -1</span><br><span class="line">        self.bullet_count -&#x3D; 1</span><br><span class="line"></span><br><span class="line">        # 3.给出发射信息</span><br><span class="line">        print(&quot;%s 突突突。。。  %d&quot; %(self.model, self.bullet_count))</span><br><span class="line"></span><br><span class="line"># 创建枪类</span><br><span class="line">ak47 &#x3D; gun(&quot;ak47&quot;)</span><br><span class="line">ak47.add_bullet(1)</span><br><span class="line">ak47.shoot()</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="例—士兵突击–02士兵类"><a href="#例—士兵突击–02士兵类" class="headerlink" title="例—士兵突击–02士兵类"></a>例—士兵突击–02士兵类</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">class gun:</span><br><span class="line">    def __init__(self,model):</span><br><span class="line">        # 手枪型号</span><br><span class="line">        self.model &#x3D; model</span><br><span class="line">        # 子弹数目</span><br><span class="line">        self.bullet_count &#x3D; 0</span><br><span class="line"></span><br><span class="line">        # 装弹</span><br><span class="line">    def add_bullet(self,count):</span><br><span class="line">        self.bullet_count +&#x3D; count</span><br><span class="line"></span><br><span class="line">        # 射击方法</span><br><span class="line">    def shoot(self):</span><br><span class="line">        # 1.判断子弹数量</span><br><span class="line">        if self.bullet_count &lt;&#x3D; 0:</span><br><span class="line">            print(&quot;【%s】子弹数量不足，请装弹&quot; % self.model)</span><br><span class="line">            return</span><br><span class="line"></span><br><span class="line">        # 2.发射子弹 -1</span><br><span class="line">        self.bullet_count -&#x3D; 1</span><br><span class="line"></span><br><span class="line">        # 3.给出发射信息</span><br><span class="line">        print(&quot;%s 突突突。。。  %d&quot; %(self.model, self.bullet_count))</span><br><span class="line"></span><br><span class="line"># 创建士兵类</span><br><span class="line">class soldier:</span><br><span class="line">    def __init__(self, name):</span><br><span class="line">        # 1.姓名</span><br><span class="line">        self.name &#x3D; name</span><br><span class="line">        # 2.枪 - 新兵无枪</span><br><span class="line">        # 不知道赋值什么的赋值none ,使用时候再在外部使用赋值</span><br><span class="line">        self.gun &#x3D; None</span><br><span class="line"></span><br><span class="line"># 创建枪类</span><br><span class="line">ak47 &#x3D; gun(&quot;ak47&quot;)</span><br><span class="line">ak47.add_bullet(0)</span><br><span class="line">ak47.shoot()</span><br><span class="line"></span><br><span class="line"># 创建许三多</span><br><span class="line">xusanduo &#x3D; soldier(&quot;许三多&quot;)</span><br><span class="line">xusanduo.gun &#x3D; ak47</span><br><span class="line">print(xusanduo.gun)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="例—士兵突击–03开枪的方法"><a href="#例—士兵突击–03开枪的方法" class="headerlink" title="例—士兵突击–03开枪的方法"></a>例—士兵突击–03开枪的方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">class gun:</span><br><span class="line">    def __init__(self,model):</span><br><span class="line">        # 手枪型号</span><br><span class="line">        self.model &#x3D; model</span><br><span class="line">        # 子弹数目</span><br><span class="line">        self.bullet_count &#x3D; 0</span><br><span class="line"></span><br><span class="line">        # 装弹</span><br><span class="line">    def add_bullet(self,count):</span><br><span class="line">        self.bullet_count +&#x3D; count</span><br><span class="line"></span><br><span class="line">        # 射击方法</span><br><span class="line">    def shoot(self):</span><br><span class="line">        # 1.判断子弹数量</span><br><span class="line">        if self.bullet_count &lt;&#x3D; 0:</span><br><span class="line">            print(&quot;【%s】子弹数量不足，请装弹&quot; % self.model)</span><br><span class="line">            return</span><br><span class="line"></span><br><span class="line">        # 2.发射子弹 -1</span><br><span class="line">        self.bullet_count -&#x3D; 1</span><br><span class="line"></span><br><span class="line">        # 3.给出发射信息</span><br><span class="line">        print(&quot;%s 突突突。。。  %d&quot; %(self.model, self.bullet_count))</span><br><span class="line"></span><br><span class="line"># 创建士兵类</span><br><span class="line">class soldier:</span><br><span class="line">    def __init__(self, name):</span><br><span class="line">        # 1.姓名</span><br><span class="line">        self.name &#x3D; name</span><br><span class="line">        # 2.枪 - 新兵无枪</span><br><span class="line">        # 不知道赋值什么的赋值none ,使用时候再在外部使用赋值</span><br><span class="line">        self.gun &#x3D; None</span><br><span class="line">    # 开枪</span><br><span class="line">    def fire(self):</span><br><span class="line">        # 1.判断是否有枪</span><br><span class="line">        if self.gun &#x3D;&#x3D; None:</span><br><span class="line">            print(&quot;%s 还没有枪...&quot; % self.name)</span><br><span class="line">            return</span><br><span class="line"></span><br><span class="line">        # 2.高喊口号</span><br><span class="line">        print(&quot;冲啊......%s&quot; % self.name)</span><br><span class="line"></span><br><span class="line">        # 3装填子弹</span><br><span class="line">        self.gun.add_bullet(50)</span><br><span class="line"></span><br><span class="line">        # 4.让枪发射子弹</span><br><span class="line">        self.gun.shoot()</span><br><span class="line"># 创建枪类</span><br><span class="line">ak47 &#x3D; gun(&quot;ak47&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 创建许三多</span><br><span class="line">xusanduo &#x3D; soldier(&quot;许三多&quot;)</span><br><span class="line">xusanduo.gun &#x3D; ak47</span><br><span class="line">xusanduo.fire()</span><br><span class="line">print(xusanduo.gun)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="私有属性与私有方法"><a href="#私有属性与私有方法" class="headerlink" title="私有属性与私有方法"></a>私有属性与私有方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class women:</span><br><span class="line">    def __init__(self,name):</span><br><span class="line">        self.name &#x3D; name</span><br><span class="line">        # self.age  &#x3D; 18</span><br><span class="line">        self.__age &#x3D; 18</span><br><span class="line">        # __加上属性即是私有属性，允许对象内部访问，外部无法直接使用，而可以使用内部的方法调用属性</span><br><span class="line">        # 私有方法与私有属性一样，命名方式与不允许外部调用，只能在对象内部调用</span><br><span class="line">    def secret(self):</span><br><span class="line">        print(&quot;%s 的年龄是 %d&quot; % (self.name, self.__age))</span><br><span class="line"></span><br><span class="line">xiaofang &#x3D; women(&quot;小芳&quot;)</span><br><span class="line"># print(xiaofang._women__age)</span><br><span class="line">xiaofang.secret()</span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">没有真正意义上的私有方法及私有属性</span><br><span class="line">在外部使用_类名__方法即可正常使用</span><br><span class="line">例如上面的</span><br><span class="line">print(xiaofang._women__age)</span><br><span class="line">即可以正常执行</span><br><span class="line">私有方法一样</span><br><span class="line">&quot;&quot;&quot;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="多态继承"><a href="#多态继承" class="headerlink" title="多态继承"></a>多态继承</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"># 多态可以同时继承多个父态的方法与属性</span><br><span class="line"></span><br><span class="line">class A:</span><br><span class="line">    def testA(self):</span><br><span class="line">        print(&quot;a&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class B:</span><br><span class="line">    def testB(self):</span><br><span class="line">        print(&quot;b&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 应该避免多个父态属性的同名方法</span><br><span class="line"># 调用多个父态的同名方法时候按照下面的继承顺序调用</span><br><span class="line"># 可以用 类名.__mro__查看调用顺序</span><br><span class="line">class C(B, A):</span><br><span class="line">    def testC(self):</span><br><span class="line">        print(&quot;c&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">c &#x3D; C()</span><br><span class="line">print(c.testA())</span><br><span class="line">print(c.testB())</span><br><span class="line">print(C.__mro__)</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="面向对象特性"><a href="#面向对象特性" class="headerlink" title="面向对象特性"></a>面向对象特性</h1><h2 id="不使用继承开发动物和狗"><a href="#不使用继承开发动物和狗" class="headerlink" title="不使用继承开发动物和狗"></a>不使用继承开发动物和狗</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">class Animal:</span><br><span class="line">    def eat(self):</span><br><span class="line">        print(&quot;吃&quot;)</span><br><span class="line"></span><br><span class="line">    def drink(self):</span><br><span class="line">        print(&quot;喝&quot;)</span><br><span class="line"></span><br><span class="line">    def run(self):</span><br><span class="line">        print(&quot;跑&quot;)</span><br><span class="line">    def sleep(self):</span><br><span class="line">        print(&quot;睡觉&quot;)</span><br><span class="line"></span><br><span class="line">class Dog:</span><br><span class="line">    def eat(self):</span><br><span class="line">        print(&quot;吃&quot;)</span><br><span class="line"></span><br><span class="line">    def drink(self):</span><br><span class="line">        print(&quot;喝&quot;)</span><br><span class="line"></span><br><span class="line">    def run(self):</span><br><span class="line">        print(&quot;跑&quot;)</span><br><span class="line"></span><br><span class="line">    def sleep(self):</span><br><span class="line">        print(&quot;睡觉&quot;)</span><br><span class="line">    def bark(self):</span><br><span class="line">        print(&quot;汪汪叫&quot;)</span><br><span class="line"></span><br><span class="line"># 创建一个对象，狗对象</span><br><span class="line">wangcai &#x3D; Dog()</span><br><span class="line">wangcai.eat()</span><br><span class="line">wangcai.run()</span><br><span class="line">wangcai.drink()</span><br><span class="line">wangcai.sleep()</span><br><span class="line">wangcai.bark()</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="使用继承开发动物和狗"><a href="#使用继承开发动物和狗" class="headerlink" title="使用继承开发动物和狗"></a>使用继承开发动物和狗</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">class Animal:</span><br><span class="line">    def eat(self):</span><br><span class="line">        print(&quot;吃&quot;)</span><br><span class="line"></span><br><span class="line">    def drink(self):</span><br><span class="line">        print(&quot;喝&quot;)</span><br><span class="line"></span><br><span class="line">    def run(self):</span><br><span class="line">        print(&quot;跑&quot;)</span><br><span class="line"></span><br><span class="line">    def sleep(self):</span><br><span class="line">        print(&quot;睡觉&quot;)</span><br><span class="line"></span><br><span class="line"># 继承的语法如下，即子类继承父类所有的属性与方法</span><br><span class="line"># class 类名（父类名字）：</span><br><span class="line"># 继承可以减少重复开发相同代码</span><br><span class="line"># 继承具有传递性</span><br><span class="line"># 如同最后的孝天犬类可以使用父类的父类动物类的方法</span><br><span class="line"># 警告 ： 孝天犬不能调用其他继承动物类的方法，</span><br><span class="line"># 如猫类继承动物类，狗类继承动物类，狗类不能调用猫类的方法</span><br><span class="line">class Dog(Animal):</span><br><span class="line">    def bark(self):</span><br><span class="line">        print(&quot;汪汪叫&quot;)</span><br><span class="line"></span><br><span class="line">class xiaotianquan(Dog):</span><br><span class="line">    def fly(self):</span><br><span class="line">        print(&quot;我能飞&quot;)</span><br><span class="line"># 使用继承开发一个狗；类对象</span><br><span class="line">wangcai &#x3D; Dog()</span><br><span class="line">wangcai.eat()</span><br><span class="line">wangcai.run()</span><br><span class="line">wangcai.drink()</span><br><span class="line">wangcai.sleep()</span><br><span class="line">wangcai.bark()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#创建孝天犬对象</span><br><span class="line">xiao &#x3D; xiaotianquan()</span><br><span class="line">xiaotianquan.sleep()</span><br><span class="line">xiaotianquan.bark()</span><br><span class="line">xiaotianquan.fly()</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="覆盖父类方法即方法重写"><a href="#覆盖父类方法即方法重写" class="headerlink" title="覆盖父类方法即方法重写"></a>覆盖父类方法即方法重写</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">方法重写即是对继承来的方法不符合实际，进行从新的编写</span><br><span class="line">编写语法即是在子类中写一个同名的方法，例如下面的孝天犬类的bark重写</span><br><span class="line">子类重写的方法，调用时候会调用子类的方法，不会调用父类的方法</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class Animal:</span><br><span class="line">    def eat(self):</span><br><span class="line">        print(&quot;吃&quot;)</span><br><span class="line"></span><br><span class="line">    def drink(self):</span><br><span class="line">        print(&quot;喝&quot;)</span><br><span class="line"></span><br><span class="line">    def run(self):</span><br><span class="line">        print(&quot;跑&quot;)</span><br><span class="line">    def sleep(self):</span><br><span class="line">        print(&quot;睡觉&quot;)</span><br><span class="line"></span><br><span class="line">class Dog(Animal):</span><br><span class="line">    def bark(self):</span><br><span class="line">        print(&quot;汪汪叫&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class xiaotianquan(Dog):</span><br><span class="line">    def fly(self):</span><br><span class="line">        print(&quot;我能飞&quot;)</span><br><span class="line"></span><br><span class="line">    def bark(self):</span><br><span class="line">        print(&quot;嗷呜，重写的狗类叫声&quot;)</span><br><span class="line"></span><br><span class="line">xtq &#x3D; xiaotianquan()</span><br><span class="line">xtq.bark()</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="扩展父类方法"><a href="#扩展父类方法" class="headerlink" title="扩展父类方法"></a>扩展父类方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">class Animal:</span><br><span class="line">    def eat(self):</span><br><span class="line">        print(&quot;吃&quot;)</span><br><span class="line"></span><br><span class="line">    def drink(self):</span><br><span class="line">        print(&quot;喝&quot;)</span><br><span class="line"></span><br><span class="line">    def run(self):</span><br><span class="line">        print(&quot;跑&quot;)</span><br><span class="line">    def sleep(self):</span><br><span class="line">        print(&quot;睡觉&quot;)</span><br><span class="line"></span><br><span class="line">class Dog(Animal):</span><br><span class="line">    def bark(self):</span><br><span class="line">        print(&quot;汪汪叫&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class xiaotianquan(Dog):</span><br><span class="line">    def fly(self):</span><br><span class="line">        print(&quot;我能飞&quot;)</span><br><span class="line"># 父类的方法的扩展</span><br><span class="line">    def bark(self):</span><br><span class="line">        # 1.针对子类特殊的需求编写代码</span><br><span class="line">        print(&quot;神一样的叫唤&quot;)</span><br><span class="line">        # 2.使用 super(). 调用父类的编码</span><br><span class="line"></span><br><span class="line">        # super().bark()</span><br><span class="line">        # 等价于(下面方式不推荐)</span><br><span class="line">        Dog.bark(self)</span><br><span class="line">        # 3.增加其他子类的代码</span><br><span class="line">        print(&quot;#$%$#%&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">xtq &#x3D; xiaotianquan()</span><br><span class="line">xtq.bark()</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="父类的私有属性与私有方法"><a href="#父类的私有属性与私有方法" class="headerlink" title="父类的私有属性与私有方法"></a>父类的私有属性与私有方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">视频399 -400</span><br><span class="line">子类&#x2F;外部不能访问父类私有属性与私有方法</span><br><span class="line">父类可以访问自己的私有属性与私有方法</span><br><span class="line">子类可以调用父类的公有方法与属性</span><br><span class="line">故子类可以通过父类共有方法间接访问父类的私有属性与方法</span><br><span class="line">&quot;&quot;&quot;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="多继承"><a href="#多继承" class="headerlink" title="多继承"></a>多继承</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># 一个子类可以继承多个父类</span><br><span class="line">class A:</span><br><span class="line">    def testA(self):</span><br><span class="line">        print(&quot;a&quot;)</span><br><span class="line"></span><br><span class="line">class B:</span><br><span class="line">    def testB(self):</span><br><span class="line">        print(&quot;b&quot;)</span><br><span class="line"></span><br><span class="line">class C(A,B):</span><br><span class="line">    def testC(self):</span><br><span class="line">        print(&quot;c&quot;)</span><br><span class="line"></span><br><span class="line">c &#x3D; C()</span><br><span class="line">c.testA()</span><br><span class="line">c.testB()</span><br><span class="line">c.testC()</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="遗失7-16"><a href="#遗失7-16" class="headerlink" title="遗失7 -16"></a>遗失7 -16</h2><hr>
+<h2 id="多态案例"><a href="#多态案例" class="headerlink" title="多态案例"></a>多态案例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">相同的对象调用不同子类调用不同方法</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">class Dog(object):  # 默认继承自object尽量注明</span><br><span class="line">    def __init__(self, name):</span><br><span class="line">        self.name &#x3D; name</span><br><span class="line"></span><br><span class="line">    def game(self):</span><br><span class="line">        print(&quot;%s 蹦蹦跳跳的玩耍&quot; % self.name)</span><br><span class="line"></span><br><span class="line">class xiaotiandog(Dog):</span><br><span class="line">    def game(self):</span><br><span class="line">        print(&quot;%s 飞到天上去玩耍&quot; % self.name)</span><br><span class="line"></span><br><span class="line">class Person(object):</span><br><span class="line">    def __init__(self,name):</span><br><span class="line">        self.name &#x3D; name</span><br><span class="line"></span><br><span class="line">    def game_witn_dog(self,dog):</span><br><span class="line">        print(&quot;%s 和%s 快乐的玩耍&quot; %(self.name, dog.name))</span><br><span class="line">        # 让狗玩耍</span><br><span class="line">        dog.game()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#创建狗对象</span><br><span class="line"># wangcai &#x3D; Dog(&quot;旺财&quot;)</span><br><span class="line">fly_wangcai &#x3D; xiaotiandog(&quot;飞天旺财&quot;)</span><br><span class="line"># 创建人对象</span><br><span class="line">xiaoming &#x3D; Person(&quot;小明&quot;)</span><br><span class="line"># 人和狗玩耍</span><br><span class="line">xiaoming.game_witn_dog(fly_wangcai)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="类属性"><a href="#类属性" class="headerlink" title="类属性"></a>类属性</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Tool(object):</span><br><span class="line">    # 使用赋值语句创建类属性，记录所有工具对象的数量</span><br><span class="line">    # 不会记录对象的相关特征</span><br><span class="line">    count &#x3D; 0</span><br><span class="line">    def __init__(self, name):</span><br><span class="line">        self.name &#x3D; name</span><br><span class="line">        #让类属性+1</span><br><span class="line">        Tool.count +&#x3D; 1</span><br><span class="line"></span><br><span class="line"># 创建工具对象</span><br><span class="line">tool1 &#x3D; Tool(&quot;斧头&quot;)</span><br><span class="line">tool2 &#x3D; Tool(&quot;榔头&quot;)</span><br><span class="line">print(Tool.count)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="属性的获取机制"><a href="#属性的获取机制" class="headerlink" title="属性的获取机制"></a>属性的获取机制</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Tool(object):</span><br><span class="line">    # 使用赋值语句创建类属性，记录所有工具对象的数量</span><br><span class="line">    # 不会记录对象的相关特征</span><br><span class="line">    count &#x3D; 0</span><br><span class="line">    def __init__(self, name):</span><br><span class="line">        self.name &#x3D; name</span><br><span class="line">        #让类属性+1</span><br><span class="line">        Tool.count +&#x3D; 1</span><br><span class="line"></span><br><span class="line"># 创建工具对象</span><br><span class="line">tool1 &#x3D; Tool(&quot;斧头&quot;)</span><br><span class="line">tool2 &#x3D; Tool(&quot;榔头&quot;)</span><br><span class="line"></span><br><span class="line"># 输出对象工具总数</span><br><span class="line">print( &quot;工具对象总数 %s&quot;% Tool.count)  # 推荐 类名.属性</span><br><span class="line">print(tool1.count)  #  不推荐 容易产生错误，如果赋值时候会给对象增加一个属性，无法正常读取类属性</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="类方法"><a href="#类方法" class="headerlink" title="类方法"></a>类方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Tool(object):</span><br><span class="line">    # 使用赋值语句创建类属性，记录所有工具对象的数量</span><br><span class="line">    count &#x3D; 0</span><br><span class="line"></span><br><span class="line">    @classmethod</span><br><span class="line">    def show_tool_count(cls):</span><br><span class="line">        print(&quot;工具的数量是 %s&quot; % cls.count)</span><br><span class="line"></span><br><span class="line">    def __init__(self, name):</span><br><span class="line">        self.name &#x3D; name</span><br><span class="line">        #让类属性+1</span><br><span class="line">        Tool.count +&#x3D; 1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 创建对象</span><br><span class="line"></span><br><span class="line">tool1 &#x3D; Tool(&quot;斧头&quot;)</span><br><span class="line"></span><br><span class="line"># 调用类方法</span><br><span class="line">Tool.show_tool_count()</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class Dog(object):</span><br><span class="line">    # 静态方法即是不需要调要传递入的参数</span><br><span class="line">    # 不需要访问实例属性与类属性</span><br><span class="line">    @staticmethod</span><br><span class="line">    def run():</span><br><span class="line">        print(&quot;小狗快跑。。。。。&quot;)</span><br><span class="line"></span><br><span class="line"># 通过类类名.方法名调用,不需要建立对象</span><br><span class="line">Dog.run()</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="方法的综合实例"><a href="#方法的综合实例" class="headerlink" title="方法的综合实例"></a>方法的综合实例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">class Game(object):</span><br><span class="line">    # 历史最高分</span><br><span class="line">    top_score &#x3D; 0</span><br><span class="line"></span><br><span class="line">    def __init__(self, player_name):</span><br><span class="line">        self.player_name &#x3D; player_name</span><br><span class="line"></span><br><span class="line">    # 信息提示 静态方法</span><br><span class="line">    @staticmethod</span><br><span class="line">    def show_help():</span><br><span class="line">        print(&quot;帮助信息： 让僵尸进入大门&quot;)</span><br><span class="line"></span><br><span class="line">    # 类方法</span><br><span class="line">    @classmethod</span><br><span class="line">    def show_top_score(cls):</span><br><span class="line">        print(&quot;历史记录 %d&quot; % cls.top_score)</span><br><span class="line"></span><br><span class="line">    def start_game(self):</span><br><span class="line">        print(&quot;%s 游戏开始了......&quot; %self.player_name)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 1.查看游戏帮助</span><br><span class="line">Game.show_help()</span><br><span class="line"># 2.查看历史最高分</span><br><span class="line">Game.show_top_score()</span><br><span class="line"># 3.创建游戏对象</span><br><span class="line">xiaoming &#x3D; Game(&quot;小明&quot;)</span><br><span class="line">xiaoming.start_game()</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="new-方法"><a href="#new-方法" class="headerlink" title="_new_方法"></a>_new_方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class MusicPlayer(object):</span><br><span class="line">    def __new__(cls, *args, **kwargs):</span><br><span class="line">        # 1.创建对象时候，new方法会被自动调用</span><br><span class="line">        print(&quot;创建对象，分配空间&quot;)</span><br><span class="line">        # 2.为对象分配空间</span><br><span class="line">        instance &#x3D; super().__new__(cls)</span><br><span class="line">        # 3.返回对象的引用</span><br><span class="line">        return instance</span><br><span class="line">    def __init__(self):</span><br><span class="line">        print(&quot;播放器初始化&quot;)</span><br><span class="line"></span><br><span class="line"># 创建播放器对象</span><br><span class="line">player &#x3D; MusicPlayer()</span><br><span class="line">print(player)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="单例"><a href="#单例" class="headerlink" title="单例"></a>单例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># 发现对象的地址一样 ，即是对象只能创建一个，例如垃圾桶软件</span><br><span class="line"></span><br><span class="line">class MusicPlayer(object):</span><br><span class="line">    # 记录第一个被创建对象的引用</span><br><span class="line">    instance &#x3D; None</span><br><span class="line"></span><br><span class="line">    def __new__(cls, *args, **kwargs):</span><br><span class="line">        # 1.判断类属性是否为空对象</span><br><span class="line">        if cls.instance is None:</span><br><span class="line">            # 调用父类方法，为一个对象分配空间</span><br><span class="line">            cls.instance &#x3D; super().__new__(cls)</span><br><span class="line"></span><br><span class="line">        # 返回类属性保存的对象引用</span><br><span class="line">        return  cls.instance</span><br><span class="line">    #</span><br><span class="line">    pass</span><br><span class="line"></span><br><span class="line"># 创建多个实例对象</span><br><span class="line">player1 &#x3D; MusicPlayer()</span><br><span class="line">print(player1)</span><br><span class="line">player2 &#x3D; MusicPlayer()</span><br><span class="line">print(player2)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="初始化只执行一次"><a href="#初始化只执行一次" class="headerlink" title="初始化只执行一次"></a>初始化只执行一次</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"># 发现对象的地址一样 ，即是对象只能创建一个，例如垃圾桶软件</span><br><span class="line"></span><br><span class="line">class MusicPlayer(object):</span><br><span class="line">    # 记录第一个被创建对象的引用</span><br><span class="line">    instance &#x3D; None</span><br><span class="line">    init_flag &#x3D; False</span><br><span class="line"></span><br><span class="line">    def __new__(cls, *args, **kwargs):</span><br><span class="line">        # 1.判断类属性是否为空对象</span><br><span class="line">        if cls.instance is None:</span><br><span class="line">            # 调用父类方法，为一个对象分配空间</span><br><span class="line">            cls.instance &#x3D; super().__new__(cls)</span><br><span class="line"></span><br><span class="line">        # 返回类属性保存的对象引用</span><br><span class="line">        return  cls.instance</span><br><span class="line"></span><br><span class="line">    def __init__(self):</span><br><span class="line">        # 判断是否执行过初始化动作</span><br><span class="line">        if MusicPlayer.init_flag:</span><br><span class="line">            return</span><br><span class="line">        #没有执行则执行，修改类属性的数值</span><br><span class="line"></span><br><span class="line">        print(&quot;初始化播放器&quot;)</span><br><span class="line">        MusicPlayer.init_flag &#x3D; True</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 创建多个实例对象</span><br><span class="line">player1 &#x3D; MusicPlayer()</span><br><span class="line">print(player1)</span><br><span class="line">player2 &#x3D; MusicPlayer()</span><br><span class="line">print(player2)</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="待续"><a href="#待续" class="headerlink" title="待续"></a>待续</h1><hr>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>打赏</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="飞翔 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="飞翔 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python%E5%9F%BA%E7%A1%80/" rel="tag"># Python基础</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/06/21/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%BB%83%E4%B9%A0/" rel="next" title="hexo -Next MD文档常见问题">
+                <i class="fa fa-chevron-left"></i> hexo -Next MD文档常见问题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="飞翔" />
+            
+              <p class="site-author-name" itemprop="name">飞翔</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives%7C%7Carchive">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/fzxd16" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:lufzxd@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python基础"><span class="nav-number">1.</span> <span class="nav-text">Python基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HelloWorld"><span class="nav-number">1.1.</span> <span class="nav-text">HelloWorld</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注释"><span class="nav-number">1.2.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">1.3.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例子—苹果"><span class="nav-number">1.4.</span> <span class="nav-text">例子—苹果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量类型"><span class="nav-number">1.5.</span> <span class="nav-text">变量类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见函数"><span class="nav-number">1.6.</span> <span class="nav-text">常见函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#格式还输出"><span class="nav-number">1.7.</span> <span class="nav-text">格式还输出</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分支"><span class="nav-number">2.</span> <span class="nav-text">分支</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#判断"><span class="nav-number">2.1.</span> <span class="nav-text">判断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#与或非"><span class="nav-number">2.2.</span> <span class="nav-text">与或非</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#elif"><span class="nav-number">2.3.</span> <span class="nav-text">elif</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#if嵌套"><span class="nav-number">2.4.</span> <span class="nav-text">if嵌套</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#随机数加剪刀石头布"><span class="nav-number">2.5.</span> <span class="nav-text">随机数加剪刀石头布</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#循环"><span class="nav-number">3.</span> <span class="nav-text">循环</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#while循环"><span class="nav-number">3.1.</span> <span class="nav-text">while循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求和"><span class="nav-number">3.2.</span> <span class="nav-text">求和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#continue-与break"><span class="nav-number">3.3.</span> <span class="nav-text">continue 与break</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例子1—单循环打印星星"><span class="nav-number">3.4.</span> <span class="nav-text">例子1—单循环打印星星</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例子2—循环打印星星"><span class="nav-number">3.5.</span> <span class="nav-text">例子2—循环打印星星</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例子3—九九乘法表"><span class="nav-number">3.6.</span> <span class="nav-text">例子3—九九乘法表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#水平制表符与换位符"><span class="nav-number">3.7.</span> <span class="nav-text">水平制表符与换位符</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">4.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#九九乘法表"><span class="nav-number">4.1.</span> <span class="nav-text">九九乘法表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数初体验"><span class="nav-number">4.2.</span> <span class="nav-text">函数初体验</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Say-Hello函数"><span class="nav-number">4.3.</span> <span class="nav-text">Say_Hello函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数参数"><span class="nav-number">4.4.</span> <span class="nav-text">函数参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的嵌套"><span class="nav-number">4.5.</span> <span class="nav-text">函数的嵌套</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打印多行分割线"><span class="nav-number">4.6.</span> <span class="nav-text">打印多行分割线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模块使用"><span class="nav-number">4.7.</span> <span class="nav-text">模块使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高级数据类型"><span class="nav-number">5.</span> <span class="nav-text">高级数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#列表的基本使用"><span class="nav-number">5.1.</span> <span class="nav-text">列表的基本使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键字"><span class="nav-number">5.2.</span> <span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表的数据统计"><span class="nav-number">5.3.</span> <span class="nav-text">列表的数据统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排序"><span class="nav-number">5.4.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#循环遍历"><span class="nav-number">5.5.</span> <span class="nav-text">循环遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#元组及常用方法"><span class="nav-number">5.6.</span> <span class="nav-text">元组及常用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#元组的循环遍历"><span class="nav-number">5.7.</span> <span class="nav-text">元组的循环遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#格式化字符串"><span class="nav-number">5.8.</span> <span class="nav-text">格式化字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lu-09-tuple（元组）与list的转换"><span class="nav-number">5.9.</span> <span class="nav-text">lu_09_tuple（元组）与list的转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字典的定义"><span class="nav-number">5.10.</span> <span class="nav-text">字典的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字典的基本应用"><span class="nav-number">5.11.</span> <span class="nav-text">字典的基本应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字典的基本操作"><span class="nav-number">5.12.</span> <span class="nav-text">字典的基本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字典的遍历"><span class="nav-number">5.13.</span> <span class="nav-text">字典的遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字典的应用场景"><span class="nav-number">5.14.</span> <span class="nav-text">字典的应用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串的定义与遍历"><span class="nav-number">5.15.</span> <span class="nav-text">字符串的定义与遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串的常用方法"><span class="nav-number">5.16.</span> <span class="nav-text">字符串的常用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串的查找与替换"><span class="nav-number">5.17.</span> <span class="nav-text">字符串的查找与替换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本居中对齐"><span class="nav-number">5.18.</span> <span class="nav-text">文本居中对齐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#去除空白字符"><span class="nav-number">5.19.</span> <span class="nav-text">去除空白字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符的拆分与连接"><span class="nav-number">5.20.</span> <span class="nav-text">字符的拆分与连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for的循环"><span class="nav-number">5.21.</span> <span class="nav-text">for的循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用for遍历字典"><span class="nav-number">5.22.</span> <span class="nav-text">用for遍历字典</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#名片管理系统"><span class="nav-number">6.</span> <span class="nav-text">名片管理系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#cards-main-py"><span class="nav-number">6.1.</span> <span class="nav-text">cards_main.py</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#card-tools-py"><span class="nav-number">6.2.</span> <span class="nav-text">card_tools.py</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面对对象基础"><span class="nav-number">7.</span> <span class="nav-text">面对对象基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一个面对对象"><span class="nav-number">7.1.</span> <span class="nav-text">第一个面对对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建两个猫对象"><span class="nav-number">7.2.</span> <span class="nav-text">创建两个猫对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置对象属性"><span class="nav-number">7.3.</span> <span class="nav-text">设置对象属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化方法"><span class="nav-number">7.4.</span> <span class="nav-text">初始化方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用函数参数传递属性的初始数值"><span class="nav-number">7.5.</span> <span class="nav-text">利用函数参数传递属性的初始数值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#del方法"><span class="nav-number">7.6.</span> <span class="nav-text">del方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#str方法"><span class="nav-number">7.7.</span> <span class="nav-text">str方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例—小明爱跑步"><span class="nav-number">7.8.</span> <span class="nav-text">例—小明爱跑步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例—家具类的建立"><span class="nav-number">7.9.</span> <span class="nav-text">例—家具类的建立</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#房子类的建立"><span class="nav-number">7.10.</span> <span class="nav-text">房子类的建立</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加家具实体"><span class="nav-number">7.11.</span> <span class="nav-text">添加家具实体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例—士兵突击-01枪类"><span class="nav-number">7.12.</span> <span class="nav-text">例—士兵突击-01枪类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例—士兵突击–02士兵类"><span class="nav-number">7.13.</span> <span class="nav-text">例—士兵突击–02士兵类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例—士兵突击–03开枪的方法"><span class="nav-number">7.14.</span> <span class="nav-text">例—士兵突击–03开枪的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#私有属性与私有方法"><span class="nav-number">7.15.</span> <span class="nav-text">私有属性与私有方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多态继承"><span class="nav-number">7.16.</span> <span class="nav-text">多态继承</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象特性"><span class="nav-number">8.</span> <span class="nav-text">面向对象特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#不使用继承开发动物和狗"><span class="nav-number">8.1.</span> <span class="nav-text">不使用继承开发动物和狗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用继承开发动物和狗"><span class="nav-number">8.2.</span> <span class="nav-text">使用继承开发动物和狗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#覆盖父类方法即方法重写"><span class="nav-number">8.3.</span> <span class="nav-text">覆盖父类方法即方法重写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扩展父类方法"><span class="nav-number">8.4.</span> <span class="nav-text">扩展父类方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#父类的私有属性与私有方法"><span class="nav-number">8.5.</span> <span class="nav-text">父类的私有属性与私有方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多继承"><span class="nav-number">8.6.</span> <span class="nav-text">多继承</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遗失7-16"><span class="nav-number">8.7.</span> <span class="nav-text">遗失7 -16</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多态案例"><span class="nav-number">8.8.</span> <span class="nav-text">多态案例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类属性"><span class="nav-number">8.9.</span> <span class="nav-text">类属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性的获取机制"><span class="nav-number">8.10.</span> <span class="nav-text">属性的获取机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类方法"><span class="nav-number">8.11.</span> <span class="nav-text">类方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静态方法"><span class="nav-number">8.12.</span> <span class="nav-text">静态方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法的综合实例"><span class="nav-number">8.13.</span> <span class="nav-text">方法的综合实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#new-方法"><span class="nav-number">8.14.</span> <span class="nav-text">_new_方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单例"><span class="nav-number">8.15.</span> <span class="nav-text">单例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化只执行一次"><span class="nav-number">8.16.</span> <span class="nav-text">初始化只执行一次</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#待续"><span class="nav-number">9.</span> <span class="nav-text">待续</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">飞翔</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+  
+  
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
